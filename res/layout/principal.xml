@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Principal" >
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="name"
+        android:width="200sp" >
+
+        <requestFocus />
+    </EditText>
+     
+     <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/edit"
+        android:layout_toRightOf="@+id/edit"
+        android:background="@drawable/search" />
+     
+      <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_below="@+id/edit"
+        android:layout_marginLeft="22sp"
+        
+        android:layout_marginTop="25sp"
+        />
+     
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imagen"
+        android:layout_toRightOf="@id/imagen"
+        android:layout_marginLeft="35sp"
+        android:gravity="center"
+        android:shadowColor="#15c1ff"
+        android:shadowRadius="1"
+        android:text="User name"
+        android:textSize="25sp" />
+    
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user"
+        android:layout_below="@+id/user"
+        android:gravity="center"
+        android:text="id"
+        android:textSize="20sp" />
+    
+    <TextView
+        android:id="@+id/descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nombre"
+        android:layout_toRightOf="@id/imagen"
+        android:layout_marginLeft="25sp"
+        android:text="decripcion" />
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/descripcion"
+        android:layout_marginTop="25sp" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tweets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tweets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="tweets"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="seguidores"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="siguiendo"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </TableRow>
+    </TableLayout>
+
+    
+
+
+    <TextView
+        android:id="@+id/last_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22sp"
+        android:text="TextView"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:layout_below="@id/tableLayout1"
+        android:layout_marginTop="20sp"/>
+    
+    <TextView
+        android:id="@+id/last_status_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/last_status"
+       android:layout_centerHorizontal="true"
+        android:text="TextView"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <ProgressBar 
+        android:layout_height="wrap_content"
+		android:layout_width="wrap_content" 
+		android:id="@+id/progressBar"
+		style="?android:attr/progressBarStyleLarge" 
+		android:layout_centerVertical="true" 
+		android:layout_centerHorizontal="true" />
+   
+
+</RelativeLayout>
